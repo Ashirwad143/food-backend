@@ -7,7 +7,7 @@ const connectDb=require("./config/connectionDb")
 const app=express()
 app.use(cors(
     {
-        origin:"https://food-frontend-gilt.vercel.app/",credentials:true
+        origin:"*",credentials:true
     }
 ));
 app.use(express.static("public"))
