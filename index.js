@@ -6,9 +6,11 @@ const connectDb = require("./config/connectionDb")
 const app = express()
 
 app.use(cors({
-  origin: "*",
+  origin: "https://food-frontend-gilt.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }))
+
 
 app.use(express.static("public"))
 app.use(express.json())
